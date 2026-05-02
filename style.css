@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    /* Gradasi warna yang diambil dari elemen logo: Kuning, Pink Tua, dan Hitam */
+    background: linear-gradient(135deg, #f9eb33 0%, #e91e63 50%, #1a1a1a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.logo-wrapper {
+    background: white;
+    padding: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    margin-bottom: 25px;
+}
+
+/* Ukuran logo diperbesar menjadi 300px */
+.main-logo {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 40px;
+    background: #4caf50; /* Hijau dari logo */
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+    background: #f9eb33; /* Kuning dari logo saat hover */
+    color: #333;
+}
+
+/* Portfolio Section dengan Background Logo */
+.container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    background-image: url('logo1.jpeg'); /* Logo sebagai background */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%; /* Ukuran background logo di tengah */
+}
+
+/* Overlay agar background logo tidak menutupi tulisan (efek watermark) */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(255, 255, 255, 0.85); /* Putih transparan */
+    z-index: 1;
+}
+
+.section-title, .video-grid {
+    position: relative;
+    z-index: 2; /* Supaya konten berada di atas background logo */
+}
+
+.section-title h2 {
+    text-align: center;
+    color: #e91e63; /* Pink tua dari logo */
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.bold-text {
+    text-align: center;
+    font-weight: bold; /* Bold sesuai revisi */
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Video Grid */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.video-card {
+    position: relative;
+    height: 450px;
+    border-radius: 25px;
+    overflow: hidden;
+    background: #000;
+    border: 8px solid #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.video-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(233, 30, 99, 0.5); /* Pink transparan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.video-card:hover .overlay {
+    opacity: 1;
+}
+
+.overlay i {
+    font-size: 3.5rem;
+    color: white;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f8f8f8;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.social-card {
+    padding: 15px 35px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.wa { background: #25d366; } /* Hijau WA */
+.ig { background: #e1306c; } /* Pink IG */
+.fb { background: #1877f2; } /* Biru FB */
+
+.social-card:hover { 
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+footer {
+    padding: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+    background: #1a1a1a;
+    color: #999;
+}
